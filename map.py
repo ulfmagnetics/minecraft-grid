@@ -10,4 +10,3 @@ class Map:
     # Return the bounds of the map as a four-tuple (x0, y0, x1, y1)
     def bounds(self):
         return (self.top_left[0], self.top_left[1], self.top_left[0] + self.size, self.top_left[1] + self.size)
-

@@ -17,7 +17,8 @@ args = parser.parse_args()
 if args.zoom_level < 0 or args.zoom_level >= len(MAP_SIZES):
     parser.exit('Invalid zoom level. Select a level between 0 and %d.' % (len(MAP_SIZES)-1))
 
-print('Using zoom level %d' % args.zoom_level)
+print('Using zoom level %d (size=%d)' % (args.zoom_level, MAP_SIZES[args.zoom_level]))
+print('* dumping tiles...')
 
 i = 1
 for m in range(-args.num_steps, args.num_steps+1):
@@ -27,7 +28,3 @@ for m in range(-args.num_steps, args.num_steps+1):
         bounds = map_tile.bounds()
         print('%5d,%5d -> %5d,%5d' % bounds)
         i = i + 1
-
-
-
-
