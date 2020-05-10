@@ -11,7 +11,7 @@ print('----------------------------')
 parser = ArgumentParser(description='List the grid coordinates covered by various Minecraft maps.')
 parser.add_argument('-z', '--zoom-level', type=int, dest='zoom_level', default=0, help='Zoom level to use (0-4)')
 #parser.add_argument('-o', '--origin', dest='origin', default='0,0', help='Origin point to use for generating coordinates')
-parser.add_argument('-s', '--steps', type=int, dest='num_steps', default=5, help='Number of map tiles to cover in each direction from origin')
+parser.add_argument('-s', '--steps', type=int, dest='num_steps', default=1, help='Number of map tiles to cover in each direction from origin')
 args = parser.parse_args()
 
 if args.zoom_level < 0 or args.zoom_level >= len(MAP_SIZES):
